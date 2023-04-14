@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Switch Case - Exemplo prático</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let valorCompra = prompt("Insira o valor da compra:");
+        let desconto = 0;
+        let resultado = 0;
+        valorCompra = Number(valorCompra);
+
+    if (valorCompra === 100){
+
+         desconto = valorCompra*0.1
+         resultado = valorCompra - desconto;
+
+    }else if (valorCompra === 200){
+
+         desconto = valorCompra*0.2
+         resultado = valorCompra - desconto;
+
+    }else if (valorCompra === 300){
+
+         desconto = valorCompra*0.3
+         resultado = valorCompra - desconto;
+    
+    }
+
+switch(valorCompra){
+
+    case 100:
+        document.write("O valor inserido é de: "+valorCompra+ "<br>");
+        document.write("A faixa de desconto é de 10%" + "<br>");
+        document.write("O valor do desconto é: R$ "+ desconto + "<br>");
+        document.write("O total a pagar é de: "+ resultado);
+    break;
+
+    case 200:
+    document.write("O valor inserido é de: "+valorCompra+ "<br>");
+        document.write("A faixa de desconto é de 20%" + "<br>");
+        document.write("O valor do desconto é: R$ "+ desconto + "<br>");
+        document.write("O total a pagar é de: "+ resultado);
+    break;
+
+    case 300:
+        document.write("O valor inserido é de: "+valorCompra+ "<br>");
+        document.write("A faixa de desconto é de 30%" + "<br>");
+        document.write("O valor do desconto é: R$ "+ desconto + "<br>");
+        document.write("O total a pagar é de: "+ resultado);
+    break;
+    
+//Caso não achar um valor do switch
+    default:
+        document.write("Valor não encontrado, por favor tente novamente.");
+}
+
+    </script>
+
+</body>
+</html>
